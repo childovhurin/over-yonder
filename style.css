@@ -8,3 +8,14 @@
   main {
     flex: 1 0 auto;
   }
+
+  .img-responsive {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel.carousel-item { 
+    width: max-content;
+    height: 1200px;
+    }
