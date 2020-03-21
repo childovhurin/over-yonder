@@ -7,11 +7,13 @@ function getPosition(position) {
     console.log(latitude);
     console.log(longitude);
     var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude +"&maxDistance=10&key=200166394-792a17647727b298af1948b543b6c58c"
+    
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response){
         console.log(response);
+        $("p").text(response.trails[0].name);
     })
     
 }
