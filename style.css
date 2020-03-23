@@ -1,21 +1,14 @@
 
   body {
+    font-family: 'Playfair Display', serif;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+    background-size: cover;
+    background-position: center;
+}
 
   main {
     flex: 1 0 auto;
+    font-family: 'Playfair Display', serif;
   }
-
-  .img-responsive {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.carousel.carousel-item { 
-    width: max-content;
-    height: 1200px;
-    }
