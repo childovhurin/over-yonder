@@ -1,3 +1,14 @@
-.navbar {
-    background-color: black;
+
+  body {
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
 }
+
+  main {
+    flex: 1 0 auto;
+    font-family: 'Playfair Display', serif;
+  }
