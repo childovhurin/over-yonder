@@ -1,11 +1,13 @@
 $(document).ready(function(){
     $('.parallax').parallax();
   });
-
-var zipCodeURL = "https://www.zipcodeapi.com/rest/8y6B27OD8VmkCAQ2CbRKlIpO71WQAZxLihMB3eCJHlr0uhrQp3FkVoDtilpAwlus/info.json/23221/degrees" 
-
-var queryURL = "https://www.hikingproject.com/data/get-trails?lat=37.5407&lon=-77.4360&maxDistance=10&key=200166394-792a17647727b298af1948b543b6c58c"
+// import Map from 'ol/Map';
+var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&maxDistance=10&key=200166394-792a17647727b298af1948b543b6c58c"
 var zipCodeURL = "https://www.zipcodeapi.com/rest/8y6B27OD8VmkCAQ2CbRKlIpO71WQAZxLihMB3eCJHlr0uhrQp3FkVoDtilpAwlus/info.json/23221/degrees"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7b9ec1af1c62c3ad05dde09418f39f0320bc0d43
 
 
 
