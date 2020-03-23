@@ -1,3 +1,5 @@
+// import Map from 'ol/Map';
+
 $(document).ready(function () {
     $('.carousel').carousel({ fullWidth: true }).css("height", $(window).height());
     // for next slide
@@ -45,8 +47,20 @@ function getPosition(position) {
             var card = $("#card" + i);
             card.empty();
             var hikingInfo = $("<div>");
-            hikingInfo.html(`${hikeImg}
-        ${hikeName}`)
+            hikingInfo.addClass("hiking-info-div");
+            hikingInfo.html(`<img src = ${hikeImg}>
+            <br>
+            <h4>${hikeName}</h4>
+            <br>
+            <h5>${hikeSummary}</h5>
+            <br>
+            Difficulty: ${hikeDifficulty}
+            <br>
+            Length: ${hikeLength} Miles
+            <br>
+            Ascent: ${hikeAscent} Feet
+            <br>
+            Descent: ${hikeDescent} Feet`)
             card.append(hikingInfo);
             // console.log(response);
         }
@@ -54,3 +68,16 @@ function getPosition(position) {
 }
 navigator.geolocation.getCurrentPosition(getPosition);
 
+//script to create a map
+// var map = new ol.Map({
+//     target: 'map',
+//     layers: [
+//       new ol.layer.Tile({
+//         source: new ol.source.OSM()
+//       })
+//     ],
+//     view: new ol.View({
+//       center: ol.proj.fromLonLat([37.41, 8.82]),
+//       zoom: 4
+//     })
+//   });
