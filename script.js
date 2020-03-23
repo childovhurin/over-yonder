@@ -1,18 +1,7 @@
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
 // import Map from 'ol/Map';
-
-$(document).ready(function () {
-    $('.carousel').carousel({ fullWidth: true }).css("height", $(window).height());
-    // for next slide
-    $('.next').click(function () {
-        $('.carousel').carousel('next');
-    });
-    // for prev slide
-    $('.prev').click(function () {
-        $('.carousel').carousel('prev');
-    });
-});
-
-
 var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&maxDistance=10&key=200166394-792a17647727b298af1948b543b6c58c"
 var zipCodeURL = "https://www.zipcodeapi.com/rest/8y6B27OD8VmkCAQ2CbRKlIpO71WQAZxLihMB3eCJHlr0uhrQp3FkVoDtilpAwlus/info.json/23221/degrees"
 
