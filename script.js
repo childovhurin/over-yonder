@@ -1,72 +1,52 @@
 $(document).ready(function(){
     $('.parallax').parallax();
   });
-// import Map from 'ol/Map';
-var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&maxDistance=10&key=200166394-792a17647727b298af1948b543b6c58c"
-var zipCodeURL = "https://www.zipcodeapi.com/rest/8y6B27OD8VmkCAQ2CbRKlIpO71WQAZxLihMB3eCJHlr0uhrQp3FkVoDtilpAwlus/info.json/23221/degrees"
 
 
+// var zipCodeURL = "https://www.zipcodeapi.com/rest/8y6B27OD8VmkCAQ2CbRKlIpO71WQAZxLihMB3eCJHlr0uhrQp3FkVoDtilpAwlus/info.json/23221/degrees"
+var googleKey = "AIzaSyAjw7sW7HCoUO7X8NlV4SesHImrTd3pqds";
 
-
-
-var latitude;
-var longitude;
-function getPosition(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-    console.log(latitude);
-    console.log(longitude);
-    var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&maxDistance=10&key=200166394-792a17647727b298af1948b543b6c58c"
-
+//function to get lat and long from address
+function getCoordinates(address){
+    var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + googleKey;
 
     $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function (response) {
-
-        for (var i = 0; i < 6; i++) {
-            var hikeName = response.trails[i].name;
-            var hikeSummary = response.trails[i].summary;
-            var hikeDifficulty = response.trails[i].difficulty;
-            var hikeImg = response.trails[i].imgSqSmall;
-            var hikeLength = response.trails[i].length;
-            var hikeAscent = response.trails[i].ascent;
-            var hikeDescent = response.trails[i].descent;
-
-            var card = $("#card" + i);
-            card.empty();
-            var hikingInfo = $("<div>");
-            hikingInfo.addClass("hiking-info-div");
-            hikingInfo.html(`<img src = ${hikeImg}>
-            <br>
-            <h4>${hikeName}</h4>
-            <br>
-            <h5>${hikeSummary}</h5>
-            <br>
-            Difficulty: ${hikeDifficulty}
-            <br>
-            Length: ${hikeLength} Miles
-            <br>
-            Ascent: ${hikeAscent} Feet
-            <br>
-            Descent: ${hikeDescent} Feet`)
-            card.append(hikingInfo);
-            // console.log(response);
-        }
+        url : geocodeURL,
+        method : "GET"
+    }).then(function(response){
+        var addressLat = response.results[0].geometry.location.lat;
+        var addressLong = response.results[0].geometry.location.lng;
+        // console.log(response);
+        // console.log("latitude is :" + addressLat);
+        // console.log("longitude is :" + addressLong);
+        storeCoordinates(addressLat, addressLong);
     })
 }
-navigator.geolocation.getCurrentPosition(getPosition);
 
-//script to create a map
-// var map = new ol.Map({
-//     target: 'map',
-//     layers: [
-//       new ol.layer.Tile({
-//         source: new ol.source.OSM()
-//       })
-//     ],
-//     view: new ol.View({
-//       center: ol.proj.fromLonLat([37.41, 8.82]),
-//       zoom: 4
-//     })
-//   });
+//click listener for geolocation search
+$("#search").on("click", function(){
+    navigator.geolocation.getCurrentPosition(getPosition);
+
+
+})
+
+//click listener for address search
+$("#search").on("click", function(){
+    var userAddress = $("#textarea1").val();
+    getCoordinates(userAddress);
+})
+
+//function to get coordinates from geolocation access
+function getPosition(position) {
+    var geoLat = position.coords.latitude;
+    var geoLong = position.coords.longitude;
+    storeCoordinates(geoLat, geoLong);
+}
+
+
+//function to store lat and long in localStorage
+
+function storeCoordinates(lat, long){
+    localStorage.setItem("latitude", lat);
+    localStorage.setItem("longitude", long);
+}
