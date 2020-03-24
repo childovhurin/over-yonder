@@ -8,7 +8,6 @@ var zipCodeURL = "https://www.zipcodeapi.com/rest/8y6B27OD8VmkCAQ2CbRKlIpO71WQAZ
 
 
 
-
 var latitude;
 var longitude;
 function getPosition(position) {

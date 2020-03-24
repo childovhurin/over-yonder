@@ -1,4 +1,8 @@
 
+  html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+ }
+  
   body {
     font-family: 'Playfair Display', serif;
     display: flex;
@@ -12,3 +16,11 @@
     flex: 1 0 auto;
     font-family: 'Playfair Display', serif;
   }
+
+#input-field {
+  width: 70%;
+}
+
+.row .about {
+  background: rgba(0, 0, 0, .6);
+}
