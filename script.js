@@ -3,7 +3,7 @@ $(document).ready(function(){
   });
 
 
-// var zipCodeURL = "https://www.zipcodeapi.com/rest/8y6B27OD8VmkCAQ2CbRKlIpO71WQAZxLihMB3eCJHlr0uhrQp3FkVoDtilpAwlus/info.json/23221/degrees"
+
 var googleKey = "AIzaSyAjw7sW7HCoUO7X8NlV4SesHImrTd3pqds";
 
 //function to get lat and long from address
@@ -24,16 +24,18 @@ function getCoordinates(address){
 }
 
 //click listener for geolocation search
-$("#search").on("click", function(){
+$("#search-geoLocat").on("click", function(){
     navigator.geolocation.getCurrentPosition(getPosition);
+    console.log("clicked")
 
 
 })
 
 //click listener for address search
-$("#search").on("click", function(){
+$("#search-zipCode").on("click", function(){
     var userAddress = $("#textarea1").val();
     getCoordinates(userAddress);
+    console.log("clicked")
 })
 
 //function to get coordinates from geolocation access
