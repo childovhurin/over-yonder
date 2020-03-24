@@ -9,8 +9,9 @@ var longitude;
 function getPosition(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
-    console.log(latitude);
-    console.log(longitude);
+    // console.log(latitude);
+    // console.log(longitude);
+    // var queryURL = "https://api.openweathermap.org/data/2.5/forecast?units=imperial&q=lat=" + latitude + "&lon=" + longitude + "&appid=26b725bced630f42f77f9f97edf3d53a"
     var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&maxDistance=10&key=200166394-792a17647727b298af1948b543b6c58c"
     $.ajax({
         url: queryURL,
