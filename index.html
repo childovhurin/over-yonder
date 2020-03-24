@@ -20,12 +20,12 @@
       <body>
         <nav>
             <div class="nav-wrapper #1b5e20 green darken-4">
-              <a href="#" class="brand-logo"><i class="fas fa-mountain"></i>Over Yonder</a>
+             <a href="#" class="brand-logo"><i class="fas fa-mountain"></i>Over Yonder</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <!-- link to hikes result -->
-                <li><a href="hikes.html">Search Results</a></li>
+                <li><a href="hike.html">Search Results</a></li>
                 <!-- link to about us page -->
-                <li><a href="hikes.html">About</a></li>
+                <li><a href="about.html">About</a></li>
 
             </ul>
         </div>
@@ -43,18 +43,16 @@
                   <div class="col s12 center white-text">
                       <h1><b>Discover your next favorite hike</b></h1>
                       <h4 >Explore detailed information and maps for trails near you</h4>
-                      <!-- <div class="row center text-white">
+                  <form class="col s12">
+                    <div class="row">
                         <div class="input-field col s12">
                           <textarea id="textarea1" class="materialize-textarea white-text"></textarea>
-                          <label for="textarea1">Enter a zip code to find trails near you</label>
-                        <a href="hike.html" id="search" class="btn-large waves-effect waves-light green">Explore</a>
+                          <label for="textarea1">Enter your location to find trails near you</label>
+                          <a href="hike.html" id="search-zipCode" class="btn-large waves-effect waves-light green">Explore by zip code</a>
+                          <a href="hike.html" id="search-geoLocat" class="btn-large waves-effect waves-light green">Explore using my current location</a>
+                        </div>
                       </div>
-                  </div> -->
-                  <div class="input-field">
-                    <input id="search" type="search" required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-              </div>
+                    </form>
           </div>
               
       </div>
@@ -65,20 +63,20 @@
             <div class="container #81c784 green lighten-2">
               <div class="row">
                 <div class="col l6 s12">
-                  <h5 class="white-text">Footer Content</h5>
-                  <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                  <h6 class="white-text">Between every two pines is a doorway to a new world.</h6>
+                  <p class="grey-text text-lighten-4">John Muir</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                   <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Search Results</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                    <li><a class="grey-text text-lighten-3" href="hike.html">Search Results</a></li>
+                    <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
                   </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2020 Copyright Text
+                © 2020 <i class="fas fa-mountain"></i>
             </div>
         </div>
     </footer>
