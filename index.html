@@ -4,29 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Over Yonder</title>
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Custom CSS -->
-    <link rel="custom syle sheet" href="style.css">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
-    <!-- Import Font Awesome CDN -->
-    <script src="https://kit.fontawesome.com/4bfa8ea42e.js" crossorigin="anonymous"></script>
-    <!-- Materialize Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-
-<body>
-    <nav>
-        <div class="nav-wrapper #1b5e20 green darken-4">
-            <a href="#" class="brand-logo"><i class="fas fa-mountain"></i>Over Yonder</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <title>Document</title>
+        <!--Import materialize.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Custom CSS -->
+        <link rel="custom syle sheet" href="style.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">    
+        <!-- Import Font Awesome CDN -->
+        <script src="https://kit.fontawesome.com/4bfa8ea42e.js" crossorigin="anonymous"></script>
+        <!-- Materialize Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+      </head>
+      <body>
+        <nav>
+            <div class="nav-wrapper #1b5e20 green darken-4">
+             <a href="#" class="brand-logo"><i class="fas fa-mountain"></i>Over Yonder</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <!-- link to hikes result -->
-                <li><a href="hikes.html">Search Results</a></li>
+                <li><a href="hike.html">Search Results</a></li>
                 <!-- link to about us page -->
-                <li><a href="hikes.html">About</a></li>
+                <li><a href="about.html">About</a></li>
 
             </ul>
         </div>
@@ -35,63 +34,50 @@
         <div class="container">
         </div>
         <div id="p1" class="parallax-container">
-            <div class="parallax">
-                <img
-                    src="https://images.pexels.com/photos/554609/pexels-photo-554609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+          <div  class="parallax">
+              <img src="https://images.pexels.com/photos/554609/pexels-photo-554609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+              
+          </div>
+          <div class="container">
+              <div class="row">
+                  <div class="col s12 center white-text">
+                      <h1><b>Discover your next favorite hike</b></h1>
+                      <h4 >Explore detailed information and maps for trails near you</h4>
+                  <form class="col s12">
+                    <div class="row">
 
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 center white-text">
-                        <h1><b>Discover your next favorite hike</b></h1>
-                        <h4>Explore detailed information and maps for trails near you</h4>
-                        <!-- <div class="row center text-white">
                         <div class="input-field col s12">
                           <textarea id="textarea1" class="materialize-textarea white-text"></textarea>
-                          <label for="textarea1">Enter a zip code to find trails near you</label>
-                        <a href="hike.html" id="search" class="btn-large waves-effect waves-light green">Explore</a>
-                      </div>
-                  </div> -->
-
-
-                        <!--<div class="input-field">
-                            <input id="search" type="search" required>
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>-->
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea white-text"></textarea>
-                                    <label for="textarea1">Enter your location to find trails near you</label>
-                                    <a href="hike.html" id="search"
-                                        class="btn-large waves-effect waves-light green">Explore</a>
-                                </div>
-                            </div>
+                          <label for="textarea1">Enter your location to find trails near you</label>
+                          <a href="hike.html" id="search-zipCode" class="btn-large waves-effect waves-light green">Explore by zip code</a>
+                          <a href="hike.html" id="search-geoLocat" class="btn-large waves-effect waves-light green">Explore using my current location</a>
                         </div>
-                    </div>
-
-                </div>
-            </div>
+                      </div>
+          </div>
+              
+      </div>
         </div>
     </div>
-    <footer class="page-footer #81c784 green lighten-2">
-        <div class="container #81c784 green lighten-2">
-            <div class="row">
+
+    <div class="section no-pad-bot" id="index-banner">
+          <footer class="page-footer #81c784 green lighten-2">
+            <div class="container #81c784 green lighten-2">
+              <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                        content.</p>
+                  <h6 class="white-text">Between every two pines is a doorway to a new world.</h6>
+                  <p class="grey-text text-lighten-4">John Muir</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Search Results</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-                    </ul>
+                  <ul>
+                    <li><a class="grey-text text-lighten-3" href="hike.html">Search Results</a></li>
+                    <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+                  </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2020 Copyright Text
+                © 2020 <i class="fas fa-mountain"></i>
             </div>
         </div>
     </footer>
