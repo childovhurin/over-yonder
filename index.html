@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Over Yonder</title>
+        <!-- Custom CSS -->
+        <link rel="custom syle sheet" href="style.css">
         <!--Import materialize.css-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <!-- Custom CSS -->
-        <link rel="custom syle sheet" href="style.css">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">    
         <!-- Import Font Awesome CDN -->
@@ -34,11 +34,11 @@
         <div class="container">
         </div>
         <div id="p1" class="parallax-container">
-          <div  class="parallax">
+          <div class="parallax image">
               <img src="https://images.pexels.com/photos/554609/pexels-photo-554609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
               
           </div>
-          <div class="container">
+          <div class="container text">
               <div class="row">
                   <div class="col s12 center white-text">
                       <h1><b>Discover your next favorite hike</b></h1>
@@ -49,8 +49,62 @@
                         <div class="input-field col s12">
                           <textarea id="textarea1" class="materialize-textarea white-text"></textarea>
                           <label for="textarea1">Enter your location to find trails near you</label>
+                          <br/>
+                          <!-- mock-up html for optional arguments -->
+                  <form class="col s12">
+                    <div class="row">
+                      <div class="optional-arguments input-field col s4">
+                        <textarea id="max-results" class="materialize-textarea white-text"></textarea>
+                        <label for="max-results">Maximum Number of Results (500 max)</label>
+                      </div>
+                      <div class="optional-arguments input-field col s4">
+                        <textarea id="min-length" class="materialize-textarea white-text"></textarea>
+                        <label for="min-length">Minimum Trail Length (in Miles)</label>
+                      </div>
+                      <div class="optional-arguments input-field col s4">
+                        <textarea id="min-stars" class="materialize-textarea white-text"></textarea>
+                        <label for="min-stars">Minimum Star Rating of Hike (0-4)</label>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- end of mock-up -->
+                          <!-- <h6>
+                          <!-- maxResults - max # of trails to return - dropdown 10-50 -->
+                          <!-- <div class="input-field col s4 #81c784 green lighten-2">
+                            <select>
+                              <option value="maxResults" disabled selected>Number of Results</option>
+                              <option value="1result">10</option>
+                              <option value="2result">20</option>
+                              <option value="3result">30</option>
+                              <option value="4result">40</option>
+                              <option value="5result">50</option>
+                            </select>
+                          </div> -->
+                          <!-- minLength - trail length - 0mi - no minimum -->
+                          <!-- <div class="input-field col s4 #81c784 green lighten-2">
+                            <select>
+                              <option value="minLength" disabled selected>Desired Trail Length</option>
+                              <option value="1mi">0 - 1 mi</option>
+                              <option value="2mi">2mi - 5mi</option>
+                              <option value="3mi">5mi - 10mi</option>
+                              <option value="4mi">10mi - infinity</option>
+                            </select>
+                          </div> -->
+                          <!-- minStars - rating of trail - 0-4 -->
+                          <!-- <div class="input-field col s4 #81c784 green lighten-2"> -->
+                            <!-- <select multiple>
+                              <option value="minStars" disabled selected>Trail Rating<i class="far fa-star"></i></option>
+                              <option value="1star">1 -2 stars</option>
+                              <option value="2star">3 stars</option>
+                              <option value="3star">4 + stars</option> -->
+                            <!-- </select> -->
+                            <!-- <label>Trail Rating<i class="far fa-star"></i></label> -->
+                          <!-- </div> --> -->
+                        </h6>
+                          <div class = container>
                           <a href="hike.html" id="search-zipCode" class="btn-large waves-effect waves-light green">Explore by zip code</a>
                           <a href="hike.html" id="search-geoLocat" class="btn-large waves-effect waves-light green">Explore using my current location</a>
+                        </div>
                         </div>
                       </div>
                     </div>
