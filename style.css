@@ -10,6 +10,7 @@
     flex-direction: column;
     background-size: cover;
     background-position: center;
+    background-color: cadetblue;
 }
 
   main {
@@ -22,6 +23,10 @@
 }
 
 
+<<<<<<< HEAD
+
+
+=======
 #p1 {
   position: relative;
   overflow: hidden;
@@ -75,6 +80,7 @@
 a { 
   color: red !important; 
 }
+>>>>>>> 7d46b26bd37cdfaa77ae1369045e540883109bca
 
 /* help! want to make the parallax images opaque but having troubles */
 /* #p1 {
