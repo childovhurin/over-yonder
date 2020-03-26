@@ -1,6 +1,17 @@
+
+// parallax function index.html
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
+// optional arguments function - dropdown
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+
 $(document).ready(function () {
     $('.parallax').parallax();
 });
+
 
 var googleKey = "AIzaSyAjw7sW7HCoUO7X8NlV4SesHImrTd3pqds";
 

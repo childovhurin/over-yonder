@@ -21,9 +21,65 @@
   width: 70%;
 }
 
+
+#p1 {
+  position: relative;
+  overflow: hidden;
+
+}
+.parallax-container {
+  padding: 200px;
+  position: relative;
+  z-index: 2;
+} 
+.parallax image {
+  position: absolute;
+  background-color: black;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.4;
+}
+/* 
+.parallax-container {
+  position: relative;
+  background: black !important;
+  overflow: hidden;
+} */
+/* .parallax.container:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6 !important;
+  background-image: url("https://images.pexels.com/photos/554609/pexels-photo-554609.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+} */
+
+#textarea1 {
+  color: black;
+  opacity: .4;
+}
+
+a { 
+  color: red !important; 
+}
+
 /* help! want to make the parallax images opaque but having troubles */
 /* #p1 {
   opacity: .50;
 color: white;
 background-color: rgba(0, 0, 0, 0.7);
 } */
+
