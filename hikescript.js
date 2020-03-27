@@ -15,7 +15,7 @@ function makeCards(){
         method: "GET"
     }).then(function (response) {
 
-        for (var i = 0; i < maxResults; i++) {
+        for (var i = 0; i < Number(maxResults); i++) {
             var hikeName = response.trails[i].name;
             var hikeSummary = response.trails[i].summary;
             var hikeDifficulty = response.trails[i].difficulty;
@@ -24,8 +24,9 @@ function makeCards(){
             var hikeAscent = response.trails[i].ascent;
             var hikeDescent = response.trails[i].descent;
 
-            var card = $("#card" + i);
-            card.empty();
+            // var card = $("#card" + i);
+            // card.empty();
+
             var hikingInfo = $("<div>");
             hikingInfo.addClass("hiking-info-div");
             hikingInfo.html(`<img src = ${hikeImg}>
@@ -41,7 +42,7 @@ function makeCards(){
             Ascent: ${hikeAscent} Feet
             <br>
             Descent: ${hikeDescent} Feet`)
-            card.append(hikingInfo);
+            $("#card-row").append(hikingInfo);
             // console.log(response);
         }
     })

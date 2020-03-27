@@ -66,9 +66,10 @@ function storeCoordinates(lat, long) {
     localStorage.setItem("longitude", long);
 
     if (typeof (Number($("#max-results").val())) === "number" && Number($("#max-results").val()) >= 0 && Number($("#max-results").val()) <= 500) {
-        localStorage.setItem("minLength", $("#min-length").val());
+        localStorage.setItem("maxResults", $("#max-results").val());
         console.log("that worked")
     } else {
+        $("#max-results").text("Please enter a valid number")
         console.log("that didn't work");
     }
     if (typeof (Number($("#min-stars").val())) === "number" && Number($("#min-stars").val()) >= 0 && Number($("#min-stars").val()) <= 4) {
