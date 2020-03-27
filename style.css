@@ -10,7 +10,6 @@
     flex-direction: column;
     background-size: cover;
     background-position: center;
-    background-color: cadetblue;
 }
 
   main {
@@ -86,5 +85,14 @@ background-color: rgba(0, 0, 0, 0.7);
 #card-row:hover {
   height: 400px;
   width: 400px;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+
+.hiking-info-div {
+  height: 400px;
+  width: 200px;
+  border: 2px solid black;
   display: inline-block;
 }
