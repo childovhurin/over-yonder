@@ -5,8 +5,7 @@ var minLength = localStorage.getItem("minLength");
 var minStars = localStorage.getItem("minStars");
 var maxResults = localStorage.getItem("maxResults");
     
-    //function to get all card info from rei api
-
+ //function to get all card info from rei api on hike page load
 function makeCards(){    
     var queryURL = "https://www.hikingproject.com/data/get-trails?lat=" + latitude + "&lon=" + longitude + "&minLength=" + minLength + "&minStars=" + minStars + "&maxResults=" + maxResults + "&maxDistance=30&key=200166394-792a17647727b298af1948b543b6c58c"
 
@@ -24,9 +23,6 @@ function makeCards(){
             var hikeAscent = response.trails[i].ascent;
             var hikeDescent = response.trails[i].descent;
 
-            // var card = $("#card" + i);
-            // card.empty();
-
             var hikingInfo = $("<div>");
             hikingInfo.addClass("hiking-info-div");
             hikingInfo.html(`<img src = ${hikeImg}>
@@ -43,9 +39,15 @@ function makeCards(){
             <br>
             Descent: ${hikeDescent} Feet`)
             $("#card-row").append(hikingInfo);
-            // console.log(response);
         }
     })
 }
 
 makeCards();
+
+// //listener for searching from hike page
+// $(".explore-button").on("click", function(){
+
+// })
+
+
