@@ -41,6 +41,12 @@ function makeCards(){
             Ascent: ${hikeAscent} Feet
             <br>
             Descent: ${hikeDescent} Feet`)
+            .css("width", "500px")
+            .css("height","500px")
+            .css("border","2px solid black")
+            .css("margin","0px")
+            .css("padding","2px")
+            .css("align-content:center")
             $("#card-row").append(hikingInfo);
         }
     })
@@ -123,3 +129,19 @@ function validateAndStoreOptions() {
         return;
     }
 }
+function getWeather() {
+    weatherURL=`https://api.openweathermap.org/data/2.5/weather?units=imperial&lat=${latitude}&lon=${longitude}&appid=26b725bced630f42f77f9f97edf3d53a`
+    $.ajax({
+        url: weatherURL,
+        method: "GET"
+    }).then(function (response) {
+console.log(response)
+        var locationInput = $('#textarea1').val()
+        var city = locationInput;
+        var weatherContainer = $('<li>').addClass('forecast')
+        var temp = $('<h5>').text(response.main.temp + ' ' + '°F').append('<img id="icon" src=http://openweathermap.org/img/w/' + response.weather[0].icon + '.png>')
+        weatherContainer.append(city, temp)
+        $('#weather').append(weatherContainer)
+    })
+}
+getWeather()
