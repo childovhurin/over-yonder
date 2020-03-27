@@ -10,7 +10,6 @@
     flex-direction: column;
     background-size: cover;
     background-position: center;
-    background-color: cadetblue;
 }
 
   main {
@@ -21,7 +20,6 @@
 #input-field {
   width: 70%;
 }
-
 
 #p1 {
   position: relative;
@@ -76,11 +74,3 @@
 a { 
   color: red !important; 
 }
-
-/* help! want to make the parallax images opaque but having troubles */
-/* #p1 {
-  opacity: .50;
-color: white;
-background-color: rgba(0, 0, 0, 0.7);
-} */
-
