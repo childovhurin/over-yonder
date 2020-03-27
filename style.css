@@ -22,7 +22,6 @@
   width: 70%;
 }
 
-
 #p1 {
   position: relative;
   overflow: hidden;
@@ -84,3 +83,8 @@ color: white;
 background-color: rgba(0, 0, 0, 0.7);
 } */
 
+#card-row:hover {
+  height: 400px;
+  width: 400px;
+  display: inline-block;
+}
