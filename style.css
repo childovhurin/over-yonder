@@ -1,4 +1,4 @@
-/* 
+
   html {
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
  }
@@ -39,7 +39,7 @@
   width: 100%;
   height: auto;
   opacity: 0.4;
-} */
+}
 /* 
 .parallax-container {
   position: relative;
@@ -66,11 +66,11 @@
   background-size: cover;
 } */
 
-/* #textarea1 {
+#textarea1 {
   color: black;
   opacity: .4;
 }
 
 a { 
   color: red !important; 
-} */
+}
