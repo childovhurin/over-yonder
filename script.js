@@ -25,9 +25,10 @@ function getCoordinates(address) {
     }).then(function (response) {
         var addressLat = response.results[0].geometry.location.lat;
         var addressLong = response.results[0].geometry.location.lng;
+        storeCoordinates(addressLat, addressLong);
         //changes page to hike page
         window.location.href = "hike.html";
-        storeCoordinates(addressLat, addressLong);
+ 
     })
 }
 
@@ -42,7 +43,9 @@ $("#search-geoLocat").on("click", function () {
 $("#search-zipCode").on("click", function () {
     var userAddress = $("#textarea1").val();
     getCoordinates(userAddress);
-
+    $(document).ajaxStart(function () {
+        console.log("starting");
+    });
 
 })
 
@@ -61,5 +64,32 @@ function getPosition(position) {
 function storeCoordinates(lat, long) {
     localStorage.setItem("latitude", lat);
     localStorage.setItem("longitude", long);
+
+    if (typeof (Number($("#max-results").val())) === "number" && Number($("#max-results").val()) >= 0 && Number($("#max-results").val()) <= 500) {
+        localStorage.setItem("maxResults", $("#max-results").val());
+        console.log("that worked")
+    } else {
+        $("#max-results").text("Please enter a valid number")
+        console.log("that didn't work");
+    }
+    if (typeof (Number($("#min-stars").val())) === "number" && Number($("#min-stars").val()) >= 0 && Number($("#min-stars").val()) <= 4) {
+        localStorage.setItem("minStars", $("#min-stars").val());
+        console.log("that worked")
+    } else {
+        console.log("that didn't work");
+    }
+    if (typeof (Number($("#min-length").val())) === "number" && Number($("#min-length").val()) >= 0) {
+        localStorage.setItem("minLength", $("#min-length").val());
+        console.log("that worked")
+    } else {
+        console.log("that didn't work");
+    }
+
+
+
+    // localStorage.setItem("minStars", $("#min-stars").val())
+    // localStorage.setItem("maxResults", $("#max-results").val())
+    // localStorage.setItem("minLength", $("#min-length").val())
+
 }
 
