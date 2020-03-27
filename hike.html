@@ -8,7 +8,7 @@
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
     <!-- Import Font Awesome CDN -->
@@ -54,8 +54,26 @@
                                     <textarea id="textarea1" class="materialize-textarea white-text center"></textarea>
                                     <label for="textarea1">Enter your location here</label>
                                     <br>
+                                    <!-- mock-up input fields -->
+                                    <div class="input-field">
+                                        <textarea id="max-results" class="materialize-textarea white-text center"></textarea>
+                                    <label for="max-results">Maximum Number of Results (500 max) (Required)</label>
+                                    <br>
+                                    </div>
+                                    <div class="input-field">
+                                        <textarea id="min-length" class="materialize-textarea white-text center"></textarea>
+                                    <label for="min-length">Minimum Trail Length (in Miles)</label>
+                                    <br>
+                                    </div>
+                                    <div class="input-field">
+                                        <textarea id="min-stars" class="materialize-textarea white-text center"></textarea>
+                                    <label for="min-stars">Minimum Trail Star Rating (0-4)</label>
+                                    <br>
+                                    </div>
+                                    <!-- end of mock-up -->
+                                   
                                     <!--USER SEARCH INPUT-->
-                                    <div class="input-field" id="selectors">
+                                    <!-- <div class="input-field" id="selectors">
                                         <select name="cars" size="3">
                                             <option value="maxResults" disabled selected>Number of Results</option>
                                             <option value="result1">10</option>
@@ -80,10 +98,11 @@
                                             <option value="3 stars">20</option>
                                             <option value="4 - 5 stars">30</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <br>
-                                <a href="hike.html" class="btn-large waves-effect waves-light green center explore-button">Explore</a>
+                                <a href="#"
+                                    class="btn-large waves-effect waves-light green center explore-button">Explore</a>
                             </div>
 
                     </div>
@@ -95,7 +114,7 @@
         <!--FIRST ROW-->
         <div class="container">
             <div class="row" id="card-row">
-            
+
             </div>
         </div>
 
@@ -115,32 +134,32 @@
             <img src="https://www.dsdinc.com/wp-content/uploads/2017/08/map-placeholder.jpg">
         </div>
 
-    <!--FOOTER-->
-    <div class="section no-pad-bot" id="index-banner">
-        <footer class="page-footer #81c784 green lighten-2">
-            <div class="container #81c784 green lighten-2">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h6 class="white-text">Between every two pines is a doorway to a new world.</h6>
-                        <p class="grey-text text-lighten-4">John Muir</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
-                            <li><a class="grey-text text-lighten-3" href="hike.html">Search Results</a>
-                            </li>
-                            <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
-                        </ul>
+        <!--FOOTER-->
+        <div class="section no-pad-bot" id="index-banner">
+            <footer class="page-footer #81c784 green lighten-2">
+                <div class="container #81c784 green lighten-2">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h6 class="white-text">Between every two pines is a doorway to a new world.</h6>
+                            <p class="grey-text text-lighten-4">John Muir</p>
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <ul>
+                                <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                                <li><a class="grey-text text-lighten-3" href="hike.html">Search Results</a>
+                                </li>
+                                <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2020 <i class="fas fa-mountain"></i>
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2020 <i class="fas fa-mountain"></i>
+                    </div>
                 </div>
-            </div>
 
-    </div>
+        </div>
 
     </div>
     </footer>

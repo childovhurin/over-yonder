@@ -13,10 +13,11 @@ function makeCards(){
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-
+            console.log(response);
         for (var i = 0; i < Number(maxResults); i++) {
             var hikeName = response.trails[i].name;
             var hikeSummary = response.trails[i].summary;
+            var hikeStars = response.trails[i].stars;
             var hikeDifficulty = response.trails[i].difficulty;
             var hikeImg = response.trails[i].imgSqSmall;
             var hikeLength = response.trails[i].length;
@@ -31,6 +32,8 @@ function makeCards(){
             <br>
             <h5>${hikeSummary}</h5>
             <br>
+            Rating: ${hikeStars} Stars
+            <br>
             Difficulty: ${hikeDifficulty}
             <br>
             Length: ${hikeLength} Miles
@@ -43,11 +46,80 @@ function makeCards(){
     })
 }
 
+//populates hike-info-divs on page load
 makeCards();
 
-// //listener for searching from hike page
-// $(".explore-button").on("click", function(){
+//listener to clear input fields when clicked
+$(".materialize-textarea").on("click", function(){
+    $(this).val("")
+})
 
-// })
+//listener for searching from hike page
+$(".explore-button").on("click", function(){
+    event.preventDefault();
+    var userAddress = $("#textarea1").val();
+    //makes sure userAddress isn't empty
+    if(userAddress.trim() !== ""){
+        getCoordinates(userAddress);
+        }else{
+            $("#textarea1").val("Please enter a valid address, city, or zip code.")
+        }
+    getCoordinates(userAddress);
+})
 
+//function to get lat and long from address
+function getCoordinates(address) {
+    var geocodeURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + googleKey;
 
+    $.ajax({
+        url: geocodeURL,
+        method: "GET"
+    }).then(function (response) {
+        var addressLat = response.results[0].geometry.location.lat;
+        var addressLong = response.results[0].geometry.location.lng;
+        storeCoordinates(addressLat, addressLong);
+        validateAndStoreOptions();
+
+    })
+}
+// function to check if input is valid, store and change page if so, alert if not
+function validateAndStoreOptions() {
+    var maxResultsIsValid;
+    var minLengthIsValid;
+    var minStarsIsValid;
+
+    if ($("#max-results").val() !== "" && typeof (Number($("#max-results").val())) === "number" && Number($("#max-results").val()) >= 0 && Number($("#max-results").val()) <= 500) {
+        localStorage.setItem("maxResults", $("#max-results").val());
+        maxResultsIsValid = true;
+        console.log(maxResultsIsValid);
+        console.log("that worked")
+    } else {
+        $("#max-results").val("Please enter a valid number(0 - 500).");
+        console.log("that didn't work");
+    }
+    if (typeof (Number($("#min-stars").val())) === "number" && Number($("#min-stars").val()) >= 0 && Number($("#min-stars").val()) <= 4) {
+        localStorage.setItem("minStars", $("#min-stars").val());
+        minStarsIsValid = true;
+        console.log(minStarsIsValid);
+        console.log("that worked")
+    } else {
+        console.log("that didn't work");
+        $("#min-stars").val("Please enter a valid number(0 - 4).");
+
+    }
+    if (typeof (Number($("#min-length").val())) === "number" && Number($("#min-length").val()) >= 0) {
+        localStorage.setItem("minLength", $("#min-length").val());
+        minLengthIsValid = true;
+        console.log(minLengthIsValid);
+        console.log("that worked")
+    } else {
+        console.log("that didn't work");
+        $("#min-length").val("Please enter a valid number.")
+    }
+
+    if(maxResultsIsValid === true && minLengthIsValid === true && minStarsIsValid === true){
+        window.location.href = "hike.html";
+    }else{
+        return;
+    }
+}
