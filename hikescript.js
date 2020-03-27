@@ -41,6 +41,14 @@ function makeCards(){
             Ascent: ${hikeAscent} Feet
             <br>
             Descent: ${hikeDescent} Feet`)
+            // var img = $("<img>")
+            .css("width", "500px")
+            .css("height","500px")
+            .css("border","2px solid green")
+            .css("margin","2px auto")
+            .css("padding","2px")
+            $("<img>").css("width","250px")
+            // .css("display","inline-block")
             $("#card-row").append(hikingInfo);
         }
     })
@@ -135,6 +143,10 @@ console.log(response)
         var weatherContainer = $('<li>').addClass('forecast')
         var temp = $('<h5>').text(response.main.temp + ' ' + '°F').append('<img id="icon" src=http://openweathermap.org/img/w/' + response.weather[0].icon + '.png>')
         weatherContainer.append(city, temp)
+        .css("background", "green")
+        .css("width", "100px")
+        .css("height","100px")
+        // .css("padding","20px")
         $('#weather').append(weatherContainer)
     })
 }
