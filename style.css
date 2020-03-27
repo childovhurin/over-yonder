@@ -1,21 +1,21 @@
-
-  html {
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
- }
-  
-  body {
-    font-family: 'Playfair Display', serif;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center;
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
 
-  main {
-    flex: 1 0 auto;
-    font-family: 'Playfair Display', serif;
-  }
+body {
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  flex: 1 0 auto;
+  font-family: 'Playfair Display', serif;
+}
+
 
 .hiking-info-div {
   height: 400px;
