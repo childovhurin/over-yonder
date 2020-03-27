@@ -10,7 +10,6 @@
     flex-direction: column;
     background-size: cover;
     background-position: center;
-    background-color: cadetblue;
 }
 
   main {
@@ -21,7 +20,6 @@
 #input-field {
   width: 70%;
 }
-
 
 #p1 {
   position: relative;

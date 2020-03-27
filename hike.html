@@ -14,14 +14,15 @@
     <!-- Import Font Awesome CDN -->
     <script src="https://kit.fontawesome.com/4bfa8ea42e.js" crossorigin="anonymous"></script>
     <!-- Materialize Icons -->
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="custom syle sheet" href="style.css">
 </head>
 
 <body>
     <!--NAV BAR-->
     <nav>
-        <div class="nav-wrapper #1b5e20 green darken-4">
+        <div class="nav-wrapper #1b5e20 green darken-4" id="weather">
             <a href="index.html" class="brand-logo"><i class="fas fa-mountain"></i>Over Yonder</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <!--INDEX.HTML-->
@@ -94,74 +95,25 @@
         <!--FIRST ROW-->
         <div class="container">
             <div class="row" id="card-row">
-                <!-- <div class="col s12 m4"> -->
-                    <!--CARD 0-->
-                    <!-- <div class="card blue-grey darken-1" id="card0">
-                        <div class="card">
-                            <div class="card-image"><img
-                                    src="https://www.americansouthwest.net/utah/photographs1118/mount-kinesava.jpg">
-                                <span class="card-title">Hike Name</span>
-                            </div>
-                            <div class="card-content">I am a very simple card. I am good at containing small bits of
-                                information. I am convenient because I require little markup to use effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4"> -->
-                    <!--Card 1-->
-                    <!-- <div class="card blue-grey darken-1" id="card1">
-                        <div class="card">
-                            <div class="card-image"><img
-                                    src="https://www.americansouthwest.net/utah/photographs1118/mount-kinesava.jpg">
-                                <span class="card-title">Hike Name</span>
-                            </div>
-                            <div class="card-content">I am a very simple card. I am good at containing small bits of
-                                information. I am convenient because I require little markup to use effectively.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4"> -->
-                    <!--CARD 2-->
-                    <!-- <div class="card blue-grey darken-1" id="card2">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="https://www.americansouthwest.net/utah/photographs1118/mount-kinesava.jpg">
-                                <span class="card-title">Hike Name</span>
-                            </div>
-                            <div class="card-content">I am a very simple card. I am good at containing small
-                                bits of information. I am convenient because I require little markup to use
-                                effectively.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+            
             </div>
         </div>
 
-        <!--Weather and Map Conatiner-->
+        <!--Weather and Map Conatiner
         <div class="container">
-            <!--Weather Row-->
+            Weather Row
             <div class="row">
-                <div class="col s3 push-s9">
+                <div class="col m3 push-m9">
                     <div class="card" id="weather">
                         <img src="http://placehold.jp/100x300.png">
                     </div>
                 </div>
             </div>
-
-            <!--Google Map Row-->
-            <div class="container">
-                <div class="parallax-container" id="map">
-                    <div class="col s9 push-s3">
-                        <img src="https://www.dsdinc.com/wp-content/uploads/2017/08/map-placeholder.jpg">
-                    </div>
-                </div>
-            </div>
+        </div>-->
+        <!--Google Map Row-->
+        <div class="col m9 pull-m3" id="map">
+            <img src="https://www.dsdinc.com/wp-content/uploads/2017/08/map-placeholder.jpg">
         </div>
-    </div>
 
     <!--FOOTER-->
     <div class="section no-pad-bot" id="index-banner">
@@ -174,6 +126,7 @@
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <ul>
+                            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
                             <li><a class="grey-text text-lighten-3" href="hike.html">Search Results</a>
                             </li>
                             <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
