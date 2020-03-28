@@ -44,7 +44,8 @@ function makeCards(){
             // var img = $("<img>")
             .css("width", "500px")
             .css("height","500px")
-            .css("border","2px solid green")
+            .css("border","5px solid #1B5E20")
+            .css("border-radius", "5px" )
             .css("margin","2px auto")
             .css("padding","2px")
             // $("<img>").css("width","250px")
@@ -137,17 +138,19 @@ function getWeather() {
         url: weatherURL,
         method: "GET"
     }).then(function (response) {
-console.log(response)
+        // console.log(response)
         var locationInput = $('#textarea1').val()
         var city = locationInput;
-        var weatherContainer = $('<li>').addClass('forecast')
-        var temp = $('<h5>').text(response.main.temp + ' ' + '°F').append('<img id="icon" src=http://openweathermap.org/img/w/' + response.weather[0].icon + '.png>')
-        weatherContainer.append(city, temp)
-        .css("background", "green")
-        .css("width", "100px")
-        .css("height","100px")
-        // .css("padding","20px")
-        $('#weather').append(weatherContainer)
+        var cityName = response.name;
+        var temp = $("#weatherText").text(cityName + ":" + " " + response.main.temp + ' ' + '°F').append('<img id="icon" src=http://openweathermap.org/img/w/' + response.weather[0].icon + '.png>')
+        .css("background", "#1B5E20")
+        .css("width", "100%")
+        .css("height", "75px")
+        .css("margin", "auto")
+        .css("padding", "5px")
+        $('#addWeather').append(temp)
     })
 }
 getWeather()
+
+// if(cityName.length > 10;  )
