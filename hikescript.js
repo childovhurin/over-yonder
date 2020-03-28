@@ -47,7 +47,7 @@ function makeCards(){
             .css("border","2px solid green")
             .css("margin","2px auto")
             .css("padding","2px")
-            $("<img>").css("width","250px")
+            // $("<img>").css("width","250px")
             // .css("display","inline-block")
             $("#card-row").append(hikingInfo);
         }
